@@ -1,10 +1,10 @@
-# Importa la biblioteca para formatear números monetarios
+# Importa la biblioteca para formatear números en moneda
 import locale
 
-# Establece la configuración de localización en español
+# Establece la configuración de localización chile
 locale.setlocale(locale.LC_ALL, "es_CL")
 
-# Define la función agregar_compra
+# función agregar_compra
 def agregar_compra(compra, compras):
     # Agrega la compra a la lista
     compras.append(compra)
@@ -12,7 +12,7 @@ def agregar_compra(compra, compras):
     # Muestra un mensaje de confirmación
     print("Compra agregada correctamente")
 
-# Define la función mostrar_compras
+# función mostrar_compras
 def mostrar_compras(compras):
     # Si la lista de compras está vacía, muestra un mensaje
     if not compras:
@@ -24,7 +24,7 @@ def mostrar_compras(compras):
         # Muestra el número y el monto de la compra, le sumamos +1 ya que parte en 0
         print(f"Compra {i + 1}: {compra}")
 
-# Define la función mostrar_total
+# función mostrar_total
 def mostrar_total(compras):
     # Si la lista de compras está vacía, muestra un mensaje
     if not compras:
