@@ -22,8 +22,10 @@ def mostrar_compras(compras):
     # Recorre la lista de compras y muestra cada compra
     for i, compra in enumerate(compras):
 
-        # Muestra el número y el monto de la compra, le sumamos +1 ya que parte en 0
-        print(f"Compra {i + 1}: {compra}")
+
+        # Muestra el número y el monto de la compra, le sumamos +1 ya que parte en 0 y al monto de compra lo seteamos para tipo monetario
+
+        print(f"Compra {i + 1}: {locale.currency(compra, grouping=True)}")
 
 
 def mostrar_total(compras):
