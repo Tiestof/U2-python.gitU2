@@ -1,7 +1,7 @@
-# Importamos la biblioteca para formatear números en moneda dependiendo de la localizacion e idioma
+# Importamos la biblioteca para formatear números en moneda
 import locale
 
-#  configuración de localización para chile
+#  configuramos el idioma y la localización para chile (es_CL)
 locale.setlocale(locale.LC_ALL, "es_CL")
 
 
