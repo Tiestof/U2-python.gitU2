@@ -53,6 +53,7 @@ def main():
 
     while True:
         # desplegams el menu
+        print("")
         print("<<<      MENU       >>>")
         print("")
         print("1.- AGREGAR COMPRA")
@@ -61,12 +62,12 @@ def main():
         print("4.- SALIR")
 
         # Solicitar al usuario el ingreso de una opcion
-        opcion = input("Seleccione una opción: ")
+        opcion = input("Seleccione una accion: ")
 
         # Opcion 1, Ingreso compra
         if opcion == "1":
             # Solicitar al usuario el monto de la compra
-            monto = int(input("Ingrese el monto de la compra: "))
+            monto = int(input("Ingrese el monto de compra: "))
 
             # Agregamos la compra a la lista llamando a la funcion creada
             agregar_compra(monto, compras)
@@ -88,8 +89,7 @@ def main():
 
         else:
             # si no es una opcion valida, mostramos el mjs de error
-            print("Opción incorrecta")
-
+            print("Opción invalida")
 
 if __name__ == "__main__":
     main()
