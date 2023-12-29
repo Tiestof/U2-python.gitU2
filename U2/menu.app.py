@@ -1,4 +1,4 @@
-# Importa la biblioteca para formatear números en moneda dependiendo de la localizacion e idioma
+# Importamos la biblioteca para formatear números en moneda dependiendo de la localizacion e idioma
 import locale
 
 #  configuración de localización para chile
