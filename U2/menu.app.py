@@ -53,11 +53,12 @@ def main():
 
     while True:
         # desplegams el menu
-        print("###      Menú        ###")
-        print("1. Agregar compra")
-        print("2. Mostrar compras")
-        print("3. Mostrar total gastado")
-        print("4. Salir")
+        print("<<<      MENU       >>>")
+        print("")
+        print("1.- AGREGAR COMPRA")
+        print("2.- MOSTRAR COMPARAS")
+        print("3.- MOSTRAR TOTAL GASTADO")
+        print("4.- SALIR")
 
         # Solicitar al usuario el ingreso de una opcion
         opcion = input("Seleccione una opción: ")
