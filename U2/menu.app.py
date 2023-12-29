@@ -1,4 +1,4 @@
-# Importa la biblioteca para formatear números en moneda
+# Importa la biblioteca para formatear números en moneda dependiendo de la ocalizacion e idioma
 import locale
 
 #  configuración de localización para chile
@@ -32,9 +32,9 @@ def mostrar_total(compras):
         print("No hay compras registradas")
         return
 
-    # Calcula el total
+    # Calcular el total
     total_gastado = 0
-    #se recorre la lista compras
+
     for compra in compras:
         total_gastado += compra
 
