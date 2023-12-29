@@ -53,7 +53,7 @@ def main():
 
     while True:
         # desplegams el menu
-        print("** Menú **")
+        print("####      Menú      #####")
         print("1. Agregar compra")
         print("2. Mostrar compras")
         print("3. Mostrar total gastado")
