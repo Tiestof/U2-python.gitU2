@@ -1,58 +1,58 @@
 # Importa la biblioteca para formatear números en moneda
 import locale
 
-# Establece la configuración de localización chile
+#  configuración de localización para chile
 locale.setlocale(locale.LC_ALL, "es_CL")
 
-# función agregar_compra
+
 def agregar_compra(compra, compras):
-    # Agrega la compra a la lista
+    # Agrega a la lista compras la nueva compra
     compras.append(compra)
 
-    # Muestra un mensaje de confirmación
+    # mensaje de exito al agregar la compra
     print("Compra agregada correctamente")
 
-# función mostrar_compras
+
 def mostrar_compras(compras):
-    # Si la lista de compras está vacía, muestra un mensaje
+    # Si la lista de compras está vacía, muestra un mensaje indicando el problema
     if not compras:
         print("No hay compras registradas")
         return
 
     # Recorre la lista de compras y muestra cada compra
     for i, compra in enumerate(compras):
+
         # Muestra el número y el monto de la compra, le sumamos +1 ya que parte en 0
         print(f"Compra {i + 1}: {compra}")
 
-# función mostrar_total
+
 def mostrar_total(compras):
-    # Si la lista de compras está vacía, muestra un mensaje
+    # Si la lista de compras está vacía, muestra un mensaje indicando el problema
     if not compras:
         print("No hay compras registradas")
         return
 
-    # Calcula el total gastado
+    # Calcula el total
     total_gastado = 0
+    #se recorre la lista compras
     for compra in compras:
         total_gastado += compra
 
-    # Formatea el total gastado
+    # seteamos el valor de total total gastado a tipo moneda
     total_gastado = locale.currency(total_gastado, grouping=True)
 
-    # Muestra el total gastado
+    # se imprime el total gastado
     print(f"Total gastado: {total_gastado}")
 
-# Define la función main()
-def main():
-    # Crea una lista vacía de compras
-    compras = []
 
-    # Crea una variable que almacena el total gastado
+def main():
+    # lista vacía de compras
+    compras = []
+    # variable para total gastado
     total_gastado = 0
 
-    # Crea un bucle while True
     while True:
-        # Muestra el menú
+        # desplegams el menu
         print("** Menú **")
         print("1. Agregar compra")
         print("2. Mostrar compras")
@@ -62,30 +62,33 @@ def main():
         # Solicitar al usuario el ingreso de una opcion
         opcion = input("Seleccione una opción: ")
 
-        # Verifica la opción seleccionada por el usuario
+        # Opcion 1, Ingreso compra
         if opcion == "1":
-            # Solicita al usuario el monto de la compra
+            # Solicitar al usuario el monto de la compra
             monto = int(input("Ingrese el monto de la compra: "))
 
-            # Agrega la compra a la lista
+            # Agregamos la compra a la lista llamando a la funcion creada
             agregar_compra(monto, compras)
 
+        # Opcion 2, llamamos a la funcion creada para que muestre las copras realizadas
         elif opcion == "2":
             # Muestra las compras
             mostrar_compras(compras)
 
+        # Opcion 3, Llamamos la funcion creada para mostrar el total gastado en formato moneda local (chile)
         elif opcion == "3":
             # Muestra el total gastado
             mostrar_total(compras)
 
+        # Opcion 4, Salir del programa
         elif opcion == "4":
-            # Termina el programa
+
             break
 
         else:
-            # Muestra un mensaje de error
+            # si no es una opcion valida, mostramos el mjs de error
             print("Opción incorrecta")
 
-# Llama a la función main()
+
 if __name__ == "__main__":
     main()
